@@ -2,10 +2,11 @@ In the folder  2 LLM Based AI apps:
 
 1.
 Ask_CSV_App.py - an app to ask your csv questions. It is mainly using a lanchgain data-frame agent.
-I was able to add  memory buffer for the agent to  remember chat history but sometimes he is giving funny answers.
-The CSV app is working nice but has some issues  I didn't have the time to overcome.
-E.g - The agent is always running from the first question making the app work much slower 
-(I couldn't find the solution for that) Also tokens issues from openAi limitation.
+The app is running a main loop of question-answer method.
+I was able to add  memory buffer for the agent for chat history but sometimes he is giving funny answers.
+The CSV app is working nice but has some issues that  I didn't have the time to overcome.
+E.g - The agent is always running from the first question making the app work much slower and
+tokens limitations  from openAi.
 The  frontend of this app is Streamlit.
 
 Run in the terminal : streamlit run Ask_CSV_App.py
