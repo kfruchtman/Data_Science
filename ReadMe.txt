@@ -1,6 +1,6 @@
 In the folder  2 LLM Based AI apps:
 The first app:
-Ask_CSV_App.py - an app to ask your csv questions. It is using a lanchgain data frame agent.
+Ask_CSV_App.py - an app to ask your csv questions. It is mainly using a lanchgain data-frame agent.
 The CSV app is working nice but has some issues. The agent is always running 
 from the first question making the app work much slower (I couldn't find the solution for that)
 Also tokens issues from openAi limitation.
