@@ -26,7 +26,7 @@ The app is running  in 5 main phases:
 in this scenario I inserted to the chroma db the TXT directory  that contains  4 .txt files: 2 .txt of  Obama speaches
 ,1 txt from a book named "breath",1 txt of US vice president speach at corona time.
 They all exist in the TXT folder for your convenience.
-The  App is working fast and fince but still not deployed on a nice user-web interface.
+The  App is working fast and nice but still not deployed on a nice user-web interface.
 I plan on doing  that in the near future.
 
 Run  in the terminal :python Rag_App.py "your question"
