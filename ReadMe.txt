@@ -61,9 +61,10 @@ Optional Questions for Rag App :
 "what is Tummo technique?"
 
 
-
-
 Enjoy!!! 
+
+*Both apps are using my Personal OpenAi api key.Inside the secret_key.py I insert the key and import to the apps.
+
 
 
 
