@@ -15,6 +15,7 @@ Run in the terminal : streamlit run Ask_CSV_App.py
 Rag_App.py - using Langchain and OpenAi to create a  Retreival Augmented Generation application
 and  bring user specific data sources into the AI world.
 The app is running  in 5 main phases:
+
 1.Load Directory of your choice
 2.Split Documents into chunks 
 3.Load chunks embedded to VectorDb 
@@ -28,8 +29,6 @@ The  App is working fast and fince but still not deployed on a nice user-web int
 I plan on doing  that in the near future.
 
 Run  in the terminal :python Rag_App.py "your question"
-
-Enjoy!!! 
 
 Optional Questions for Ask CSV  App :
 
@@ -63,6 +62,7 @@ Optional Questions for Rag App :
 
 
 
+Enjoy!!! 
 
 
 
