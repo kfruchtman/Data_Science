@@ -1,27 +1,27 @@
 In the folder  2 LLM Based AI apps:
 
 1.
-Ask_CSV_App.py - an app to ask your csv questions. It is mainly using a lanchgain data-frame agent.
-The app is running a main loop of question-answer method.
-I was able to add  memory buffer for the agent for chat history but sometimes he is giving funny answers.
-The CSV app is working nice but has some issues that  I didn't have the time to overcome.
-E.g - The agent is always running from the first question making the app work much slower and
-tokens limitations  from openAi.
+Ask_CSV_App.py - an app to ask your csv questions. The main methods are from  lanchgain utilizing a  data-frame agent.
+The app is running in a  main loop of question-answer method.
+The agent has a  memory buffer for  chat history but sometimes he is giving funny answers.
+The CSV app is working ok but has some issues and needs fine tuning. 
+E.g - On each question the agent is starting from the beginning causing app work much slower and also 
+there are tokens limitations  from openAi which needs to be addressed.
 The  frontend of this app is Streamlit.
 
 Run in the terminal : streamlit run Ask_CSV_App.py
 
 
 2.
-Rag_App.py - using Langchain and OpenAi to create a  Retreival Augmented Generation application
+Rag_App.py - using Langchain and OpenAi to create a  "Retrieval Augmented Generation"  application
 and  bring user specific data sources into the AI world.
 The app is running  in 5 main phases:
 
 1.Load Directory of your choice
 2.Split Documents into chunks 
 3.Load chunks embedded to VectorDb 
-4.Query VectorDb for similarity 
-5.Ask AI llm model for final answer  using prompts
+4.Query VectorDb for similarity on embedded data 
+5.Ask AI llm model for final answer using prompts via langchain 
 
 in this scenario I inserted to the chroma db the TXT directory  that contains  4 .txt files: 2 .txt of  Obama speaches
 ,1 txt from a book named "breath",1 txt of US vice president speach at corona time.
