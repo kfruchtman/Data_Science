@@ -2,7 +2,7 @@ In the folder  2 LLM Based AI apps:
 
 1.
 Ask_CSV_App.py - an app to ask your csv questions. The main methods are from  lanchgain utilizing a  data-frame agent.
-The app is running in a  main loop of question-answer method.
+The app is running in a loop of question-answer method.
 The agent has a  memory buffer for  chat history but sometimes he is giving funny answers.
 The CSV app is working ok but has some issues and needs fine tuning. 
 E.g - On each question the agent is starting from the beginning causing app work much slower and also 
