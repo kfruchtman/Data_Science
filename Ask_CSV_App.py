@@ -31,7 +31,7 @@ st.set_page_config(
   page_title="Keren's Python Project Data Science 📉 ",
   page_icon="📊")
 
-#Initialize  DataFrame Agent parameters 
+#Initialize  DataFrame Agent parameters (llm, memory and PREFIX )
 def agent_init():
   llm=OpenAI(temperature=0.0)
   PREFIX = """
@@ -72,9 +72,6 @@ def agent_init():
   return llm,PREFIX,memory 
 
 
-
-
-
 #Invoke the langhchain agent to run the query on the csv file
 def answer_question(user_question,i,agent):
 
@@ -83,6 +80,8 @@ def answer_question(user_question,i,agent):
         st.write(f'The answer to your question is {response}')
         alive_flag = st.radio("Keep querying your CSV file?", ('','Yes', 'No'),index=0,key=f'answer_question_{i}')
         return alive_flag # Flag -'Yes' to keep on questioning the CSV , 'No' to quit the app
+
+
 
 
 def main():
@@ -105,9 +104,12 @@ def main():
     input_variables=['df_head', 'input', 'agent_scratchpad', 'chat_history_buffer', 'chat_history_summary', 'chat_history_KG']
 )
     alive_flag=answer_question(user_question,i,agent) # keep_asking - a flag to know if to keep on asking or quit
+
+
+#Main loop for answer/question CSV
     while alive_flag=="Yes":
                   try:
-                    i+=1
+                    i+=1#Streamlit unique key for text_input 
                     user_question=st.text_input("Next question to CSV file: ❓",key=f'question_{i}') 
                     alive_flag=answer_question(user_question,i,agent)
                     if alive_flag=="No":
@@ -115,6 +117,9 @@ def main():
                         break
                   except Exception as error:
                       st.write("An exception occurred:", error)
+
+
+
                   
     if alive_flag=="No":
        st.write('I hope you had fun! 😊  Bye 👋')                  
