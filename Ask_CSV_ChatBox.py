@@ -8,7 +8,7 @@
 from distutils.log import set_verbosity
 import streamlit as st
 import os
-from secret_key import open_api_key
+#from secret_key import open_api_key
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.agents import AgentExecutor, Tool, ZeroShotAgent,initialize_agent,load_tools
@@ -25,7 +25,8 @@ from langchain.memory import ConversationBufferMemory,CombinedMemory,Conversatio
 from langchain_openai import ChatOpenAI
 import pandas as pd
 
-os.environ['OPENAI_API_KEY']=open_api_key
+#os.environ['OPENAI_API_KEY']=open_api_key
+os.environ['OPENAI_API_KEY']=st.secrets=["open_api_key"]
 
 st.set_page_config(
    page_title="POC Ai 📉 ",
