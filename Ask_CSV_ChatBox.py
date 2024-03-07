@@ -111,12 +111,16 @@ def main():
  question=st.chat_input('Input question')
  if  user_csv is not None:
     df = pd.read_csv(user_csv) #Convert the csv file into a datafram in pandas
+    agent=agent_init(df)
     if question:
       with st.chat_message("user"):
           st.session_state.chat_hist.append({"role":"user","content": question})
           st.markdown(question)
-      agent=agent_init(df)
-      response=answer_question(question,agent)
+      try:
+        response=answer_question(question,agent)
+      except:
+         print("Something went wrong")
+         response='Try another question maybe a shorter one?'
       with st.chat_message('assistent'):
           st.markdown(response)
       st.session_state.chat_hist.append({"role":"assistent","content": response})
