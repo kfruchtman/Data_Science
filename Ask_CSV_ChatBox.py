@@ -26,7 +26,7 @@ from langchain_openai import ChatOpenAI
 import pandas as pd
 
 #os.environ['OPENAI_API_KEY']=open_api_key
-os.environ['OPENAI_API_KEY']=st.secrets=["open_api_key"]
+os.environ['OPENAI_API_KEY']=st.secrets["open_api_key"]
 
 st.set_page_config(
    page_title="POC Ai 📉 ",
