@@ -1,8 +1,22 @@
 In the folder  2 LLM Based AI apps:
 
+
+Ver2.
+Ask_CSV_ChatBox.py - 
+This is the same as the  app I presented in class  but the agent is not starting from the beginning
+ and answering plus I use the built in streamlit chatbox cool feature.Much better performance
+plus it is  deployed in streamlit cloud:
+
+Please run:
+
+https://ask-csv-test.streamlit.app/
+
+
+
+
 1.
 Ver1.
-Old Version that I presented in class:
+Old Version that I presented in class.No need to check since Ver2 is updated much better.
 Ask_CSV_App.py - an app to ask your csv questions. The main methods are from  lanchgain utilizing a  data-frame agent.
 The app is running in a loop of question-answer method.
 The agent has a  memory buffer for  chat history but sometimes he is giving funny answers.
@@ -14,12 +28,8 @@ The  frontend of this app is Streamlit.
 Run in the terminal : streamlit run Ask_CSV_App.py
 
 
-Ver2.
-Ask_CSV_ChatBox.py - 
-This is the same as the above app but the agent is not starting from the beginning and answering plus I use 
-the built in streamlit chatbox cool feature.Much better performance!
 
-Run in the terminal : streamlit run Ask_CSV_ChatBox.py
+
 
 
 2.
